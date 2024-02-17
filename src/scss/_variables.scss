@@ -1,0 +1,97 @@
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #f49fec;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --dark-bg-text-color: #fff;
+  --border-color: #ccc;
+
+  --theme-color-1: #ffedd8;
+  --theme-color-2: #f3d5b5;
+  --theme-color-3: #e7bc91;
+  --theme-color-4: #d4a276;
+  --theme-color-5: #bc8a5f;
+  --theme-color-6: #a47148;
+  --theme-color-7: #8b5e34;
+  --theme-color-8: #6f4518;
+  --theme-color-9: #603808;
+  --theme-color-10: #583101;
+}
+
+/* Device = Most of the Smartphones Mobiles (Portrait) */
+$screen-xxs-min: 320px;
+$screen-xxs-max: 480px;
+
+/* Device = Low Resolution Tablets, Mobiles (Landscape) */
+$screen-xs-min: 481px;
+$screen-xs-max: 767px;
+
+/* Device = Tablets, Ipads (portrait) */
+$screen-sm-min: 768px;
+$screen-sm-max: 1024px;
+
+/* Device = Laptops, Desktops */
+$screen-md-min: 1025px;
+$screen-md-max: 1280px;
+
+/* Device = Desktops */
+$screen-lg-min: 1281px;
+$screen-lg-max: 1440px;
+
+/* Higher Resolution Screens */
+$screen-xlg-min: 1441px;
+$screen-xlg-max: 2560px;
+
+// other variables here
+$black: #0d0d0d;
+$white: #f5f1e9;
+
+// Primary colors
+$primary: #603808;
+$secondary: #bc8a5f;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Grays
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Additional colors
+$primary-rgb: 0, 123, 255; // RGB values for the primary color
+
+// Theme colors (Bootstrap 5 alpha)
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+// Background colors
+$bg-primary: $primary;
+$bg-secondary: $secondary;
+$bg-success: $success;
+$bg-info: $info;
+$bg-warning: $warning;
+$bg-danger: $danger;
+$bg-light: $light;
+$bg-dark: $dark;
+
+// scss-docs-start tooltip-css-vars
+$tooltip-color: $white;
+$tooltip-bg: var(--theme-color-10);
