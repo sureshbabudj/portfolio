@@ -1,6 +1,10 @@
 /* eslint-disable no-console */
-import "../scss/styles.scss";
-import "bootstrap";
+import jQuery from "jquery";
+import "@popperjs/core";
+import * as bootstrap from "bootstrap";
+
+// export for others scripts to use
+window.$ = window.jQuery = jQuery;
 
 // eslint-disable-next-line no-unused-vars
 function convertImageToDataImage(img) {
@@ -20,11 +24,20 @@ function convertImageToDataImage(img) {
 $(document).ready(() => {
   // Enable tooltips everywhere
   $(function () {
-    $('[data-toggle="tooltip"]').tooltip({
-      container: "body",
-      trigger: "hover",
-    });
+    const popoverTriggerList = document.querySelectorAll(
+      '[data-toggle="tooltip"]'
+    );
+
+    [...popoverTriggerList].map(
+      (popoverTriggerEl) =>
+        new bootstrap.Tooltip(popoverTriggerEl, {
+          container: "body",
+          trigger: "hover focus",
+          placement: "top",
+        })
+    );
   });
+
   // Fetch the SVG content from a file (replace 'your-svg-file.svg' with your actual file path)
   // convertImageToDataImage("kishaa");
 
