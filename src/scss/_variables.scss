@@ -1,23 +1,3 @@
-:root {
-  --primary-color: #e74c3c;
-  --secondary-color: #f49fec;
-  --accent-color: #e74c3c;
-  --text-color: #333;
-  --dark-bg-text-color: #fff;
-  --border-color: #ccc;
-
-  --theme-color-1: #ffedd8;
-  --theme-color-2: #f3d5b5;
-  --theme-color-3: #e7bc91;
-  --theme-color-4: #d4a276;
-  --theme-color-5: #bc8a5f;
-  --theme-color-6: #a47148;
-  --theme-color-7: #8b5e34;
-  --theme-color-8: #6f4518;
-  --theme-color-9: #603808;
-  --theme-color-10: #583101;
-}
-
 /* Device = Most of the Smartphones Mobiles (Portrait) */
 $screen-xxs-min: 320px;
 $screen-xxs-max: 480px;
@@ -43,18 +23,18 @@ $screen-xlg-min: 1441px;
 $screen-xlg-max: 2560px;
 
 // other variables here
-$black: #0d0d0d;
-$white: #f5f1e9;
+$black: #000000;
+$white: #ffffff;
 
 // Primary colors
-$primary: #603808;
-$secondary: #bc8a5f;
+$primary: #000000;
+$secondary: #7f1a2c;
 $success: #28a745;
 $info: #17a2b8;
 $warning: #ffc107;
 $danger: #dc3545;
-$light: #f8f9fa;
-$dark: #343a40;
+$light: #ffffff;
+$dark: #000000;
 
 // Grays
 $gray-100: #f8f9fa;
