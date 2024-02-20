@@ -14,7 +14,7 @@ $fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
 
 html,
 body {
-  font-family: $PragatiNarrow;
+  font-family: $BodyFont;
   position: relative;
   min-width: 320px;
   font-size: 14px;
@@ -51,7 +51,7 @@ header {
   }
 
   .menus {
-    font-family: $Antonio;
+    // font-family: $Antonio;
     font-weight: 200;
     flex-grow: 0;
     .navbar-nav {
@@ -162,7 +162,7 @@ footer {
     justify-content: center;
   }
   .profile-card-heading h3 {
-    font-family: $KaushanScript;
+     font-family: $Silkscreen;
     font-size: 1.4rem;
   }
 
