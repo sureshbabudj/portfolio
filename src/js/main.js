@@ -43,5 +43,6 @@ $(document).ready(() => {
 
   // Replace copyright year
   const copyrightYear = document.getElementById("copyright-year");
-  copyrightYear.textContent = new Date(Date.now()).getFullYear();
+  if (copyrightYear)
+    copyrightYear.textContent = new Date(Date.now()).getFullYear();
 });
