@@ -1,11 +1,3 @@
-/* Device = Most of the Smartphones Mobiles (Portrait) */
-$screen-xxs-min: 320px;
-$screen-xxs-max: 480px;
-
-/* Device = Low Resolution Tablets, Mobiles (Landscape) */
-$screen-xs-min: 481px;
-$screen-xs-max: 767px;
-
 /* Device = Tablets, Ipads (portrait) */
 $screen-sm-min: 768px;
 $screen-sm-max: 1024px;
@@ -22,21 +14,21 @@ $screen-lg-max: 1440px;
 $screen-xlg-min: 1441px;
 $screen-xlg-max: 2560px;
 
-// other variables here
-$black: #000000;
+/* other variables here */
+$black: #0d0d0d;
 $white: #ffffff;
 
-// Primary colors
-$primary: #000000;
-$secondary: #7f1a2c;
-$success: #28a745;
-$info: #17a2b8;
-$warning: #ffc107;
-$danger: #dc3545;
-$light: #ffffff;
-$dark: #000000;
+/* Primary colors */
+$primary: #001d5a;
+$secondary: #f0a733;
+$success: #30bd06;
+$info: #e6ebe0;
+$warning: #f3ea3f;
+$danger: #ca2b16;
+$light: #d6e5fa;
+$dark: #c7dcfc;
 
-// Grays
+/* Grays */
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -47,10 +39,9 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 
-// Additional colors
-$primary-rgb: 0, 123, 255; // RGB values for the primary color
+/* Additional colors */
+$primary-rgb: 0, 123, 255; /* RGB values for the primary color */
 
-// Theme colors (Bootstrap 5 alpha)
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
@@ -62,7 +53,7 @@ $theme-colors: (
   "dark": $dark,
 );
 
-// Background colors
+/* Background colors */
 $bg-primary: $primary;
 $bg-secondary: $secondary;
 $bg-success: $success;
@@ -72,6 +63,6 @@ $bg-danger: $danger;
 $bg-light: $light;
 $bg-dark: $dark;
 
-// scss-docs-start tooltip-css-vars
+/* scss-docs-start tooltip-css-vars */
 $tooltip-color: $white;
-$tooltip-bg: var(--theme-color-10);
+$tooltip-bg: $gray-700;
