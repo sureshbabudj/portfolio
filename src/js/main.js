@@ -13,7 +13,7 @@ window.onscroll = function () {
 function scrollFunction() {
   const nav = document.querySelector(".sd-nav");
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    nav.style.height = "3rem";
+    nav.style.height = "4rem";
   } else {
     nav.style.height = "6rem";
   }
