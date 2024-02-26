@@ -39,10 +39,10 @@
                             <a class="nav-link" href="#photoroll">Photoroll</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Blog</a>
+                            <a class="nav-link" href="#blog">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Contact</a>
+                            <a class="nav-link" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -79,12 +79,14 @@
     <section id="about">
         <div class="container">
             <div class="row">
-                <div class="col-5">
+                <div class="d-none d-md-block col-12 col-md-5">
                     <img class="img-fluid rounded"
-                        src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=320" alt="about"
-                        width="100%" />
+                        src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=" alt="about"
+                        width="100%"
+                        srcset="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=140 140w, https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=320 320w"
+                        sizes="(max-width: 576px) 140px, 320px" />
                 </div>
-                <div class="col-7 px-5">
+                <div class="col-12 col-md-7 px-5">
                     <h3 class="section-title">About <em>Me</em></h3>
                     <p class="about-text">
                         I am <span class="my-name">Suresh Babu Dhanaraj</span> and I'm a
@@ -185,7 +187,7 @@
             <div class="row mt-4" id="work">
                 <div class="col-md-10 mx-auto">
                     <!-- Timeline -->
-                    <div class="timeline">
+                    <div class="timeline px-4">
                         <!-- Timeline Item 1 -->
                         <div class="timeline-item">
                             <span class="icon icon-info icon-lg"><img
@@ -343,7 +345,7 @@
             <h3 class="section-title text-center text-white">Lifelong learner with <em>2 MBAs, BCA,</em> <br />and a
                 passion for
                 growth.</h3>
-            <div class="education-items">
+            <div class="education-items px-5 px-md-0">
                 <div class="resume-item">
                     <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
                         title="Master of Business Administration (Information Systems)"
@@ -413,18 +415,171 @@
     </section>
     <!--- photos end-->
 
-    <div class="container">
-        <div class="row d-flex flex-wrap">
-            <div class="col-6 h-100" style="flex-grow: 2">Box 1</div>
-            <div class="col-3 h-75" style="flex-grow: 1">Box 2</div>
-            <div class="col-3 h-50" style="flex-grow: 0.5">Box 3</div>
+
+    <section id="blog" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 d-flex flex-column justify-content-center px-4">
+                    <h2 class="section-title">My <em>Blog</em></h2>
+                    <p class="fs-3">Stay tuned and updated by the latest updates from my blog.</p>
+                </div>
+                <div class="col-12 col-lg-8 blog-items">
+                    <div class="row gx-5">
+                        <a href="#" class="col-6 blog-item">
+                            <figure class="figure rounded">
+                                <img src="https://images.unsplash.com/photo-1682687220640-9d3b11ca30e5?q=80&w=420"
+                                    class="figure-img img-fluid rounded" alt="blog post image" />
+                            </figure>
+                            <div class="blog-tags mb-3">
+                                <span class="badge bg-info text-dark">Info</span>
+                                <span class="badge bg-info text-dark">Tech</span>
+                                <span class="badge bg-info text-dark">News</span>
+                                <span class="badge bg-info text-dark">Science</span>
+                            </div>
+                            <h3 class="blog-title mb-3">How to Improve Your Project Management Skills</h3>
+                            <div class="d-flex">
+                                <div class="posted-date-wrap me-3">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span class="posted-date">7-Feb-2023</span>
+                                </div>
+                                <div class="comments-count-wrap">
+                                    <i class="fa-regular fa-comments"></i>
+                                    <span class="comments-count">44</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="col-6 blog-item">
+                            <figure class="figure rounded">
+                                <img src="https://images.unsplash.com/photo-1708876954270-8fad10609e53?q=80&w=260"
+                                    class="figure-img img-fluid rounded" alt="blog post image" />
+                            </figure>
+                            <div class="blog-tags mb-3">
+                                <span class="badge bg-info text-dark">Info</span>
+                                <span class="badge bg-info text-dark">Tech</span>
+                                <span class="badge bg-info text-dark">News</span>
+                                <span class="badge bg-info text-dark">Science</span>
+                            </div>
+                            <h3 class="blog-title mb-3">How to Improve Your Project Management Skills</h3>
+                            <div class="d-flex">
+                                <div class="posted-date-wrap me-3">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span class="posted-date">7-Feb-2023</span>
+                                </div>
+                                <div class="comments-count-wrap">
+                                    <i class="fa-regular fa-comments"></i>
+                                    <span class="comments-count">44</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="col-6 blog-item">
+                            <figure class="figure rounded">
+                                <img src="https://images.unsplash.com/photo-1682695797873-aa4cb6edd613?q=80&w=260"
+                                    class="figure-img img-fluid rounded" alt="blog post image" />
+                            </figure>
+                            <div class="blog-tags mb-3">
+                                <span class="badge bg-info text-dark">Info</span>
+                                <span class="badge bg-info text-dark">Tech</span>
+                                <span class="badge bg-info text-dark">News</span>
+                                <span class="badge bg-info text-dark">Science</span>
+                            </div>
+                            <h3 class="blog-title mb-3">How to Improve Your Project Management Skills</h3>
+                            <div class="d-flex">
+                                <div class="posted-date-wrap me-3">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span class="posted-date">7-Feb-2023</span>
+                                </div>
+                                <div class="comments-count-wrap">
+                                    <i class="fa-regular fa-comments"></i>
+                                    <span class="comments-count">44</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="col-6 blog-item">
+                            <figure class="figure rounded">
+                                <img src="https://images.unsplash.com/photo-1707343845208-a20c56d2c8ba?q=80&w=260"
+                                    class="figure-img img-fluid rounded" alt="blog post image" />
+                            </figure>
+                            <div class="blog-tags mb-3">
+                                <span class="badge bg-info text-dark">Info</span>
+                                <span class="badge bg-info text-dark">Tech</span>
+                                <span class="badge bg-info text-dark">News</span>
+                                <span class="badge bg-info text-dark">Science</span>
+                            </div>
+                            <h3 class="blog-title mb-3">How to Improve Your Project Management Skills</h3>
+                            <div class="d-flex">
+                                <div class="posted-date-wrap me-3">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span class="posted-date">7-Feb-2023</span>
+                                </div>
+                                <div class="comments-count-wrap">
+                                    <i class="fa-regular fa-comments"></i>
+                                    <span class="comments-count">44</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="col-6 blog-item">
+                            <figure class="figure rounded">
+                                <img src="https://images.unsplash.com/photo-1682686581660-3693f0c588d2?q=80&w=260"
+                                    class="figure-img img-fluid rounded" alt="blog post image" />
+                            </figure>
+                            <div class="blog-tags mb-3">
+                                <span class="badge bg-info text-dark">Info</span>
+                                <span class="badge bg-info text-dark">Tech</span>
+                                <span class="badge bg-info text-dark">News</span>
+                                <span class="badge bg-info text-dark">Science</span>
+                            </div>
+                            <h3 class="blog-title mb-3">How to Improve Your Project Management Skills</h3>
+                            <div class="d-flex">
+                                <div class="posted-date-wrap me-3">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span class="posted-date">7-Feb-2023</span>
+                                </div>
+                                <div class="comments-count-wrap">
+                                    <i class="fa-regular fa-comments"></i>
+                                    <span class="comments-count">44</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="col-6 blog-item">
+                            <figure class="figure rounded">
+                                <img src="https://images.unsplash.com/photo-1682687220795-796d3f6f7000?q=80&w=260"
+                                    class="figure-img img-fluid rounded" alt="blog post image" />
+                            </figure>
+                            <div class="blog-tags mb-3">
+                                <span class="badge bg-info text-dark">Info</span>
+                                <span class="badge bg-info text-dark">Tech</span>
+                                <span class="badge bg-info text-dark">News</span>
+                                <span class="badge bg-info text-dark">Science</span>
+                            </div>
+                            <h3 class="blog-title mb-3">How to Improve Your Project Management Skills</h3>
+                            <div class="d-flex">
+                                <div class="posted-date-wrap me-3">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span class="posted-date">7-Feb-2023</span>
+                                </div>
+                                <div class="comments-count-wrap">
+                                    <i class="fa-regular fa-comments"></i>
+                                    <span class="comments-count">44</span>
+                                </div>
+                            </div>
+                        </a>
+
+
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
 
-    <section style="min-height: 400px">
+    <section id="contact" style="min-height: 400px">
         <div class="container">Some test text goes heree....</div>
     </section>
+
+    <footer></footer>
     <script src="./main.js"></script>
 </body>
 

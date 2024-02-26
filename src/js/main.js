@@ -40,10 +40,14 @@ popoverTriggerList.map(function (popoverTriggerEl) {
 });
 
 function renderPhotos(response) {
-  var pf = $('<div class="masonry gutterless flickr-photos"></div>');
+  var pf = $(
+    '<div class="masonry gutterless flickr-photos row justify-content-center"></div>'
+  );
   var photos = response.items;
   for (let i = 0; i < photos.length; i++) {
-    var post = $('<div class="brick photo-item"></div>');
+    var post = $(
+      '<div class="col-11 col-md-6 col-lg-4 mb-3 brick photo-item"></div>'
+    );
     var link = $(
       '<a class="photo-item-link" href="' +
         photos[i].link +
