@@ -565,9 +565,6 @@
                                 </div>
                             </div>
                         </a>
-
-
-
                     </div>
                 </div>
             </div>
@@ -575,8 +572,48 @@
     </section>
 
 
-    <section id="contact" style="min-height: 400px">
-        <div class="container">Some test text goes heree....</div>
+    <section id="contact" class="mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+
+                    <div class="col-md-12">
+                        <h2 class="section-title">Got a project in mind? <br />
+                            <em>Drop me a line!</em><br />
+                            Let's make something awesome together.
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <form class="row g-3 needs-validation p-3" novalidate>
+                        <div class="col-md-12">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" value="" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Name.
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" required></textarea>
+                            <div class="invalid-feedback">
+                                Please provide a valid Message.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer></footer>
