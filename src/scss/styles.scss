@@ -3,12 +3,12 @@
 
 @import "~bootstrap/scss/bootstrap";
 
-$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
+// $fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
 
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/brands";
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome";
+// @import "~@fortawesome/fontawesome-free/scss/solid";
+// @import "~@fortawesome/fontawesome-free/scss/regular";
+// @import "~@fortawesome/fontawesome-free/scss/brands";
 
 :root {
   --sd-deco-font-family: "Leckerli One", cursive;
@@ -458,6 +458,13 @@ body {
         }
       }
     }
+  }
+}
+
+footer {
+  background-color: var(--bs-gray-100);
+  .divider {
+    border-top: 0.1rem solid var(--bs-gray-200);
   }
 }
 
