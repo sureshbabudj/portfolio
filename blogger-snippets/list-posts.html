@@ -1,0 +1,123 @@
+<b:section class='main' id='main' name='Main' showaddelement='yes'>
+  <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog'>
+
+    <b:includable id='main' var='top'>
+      <b:if cond='data:blog.pageType == "index"'>
+        <b:include name='allposts' />
+      </b:if>
+      <b:if cond='data:blog.pageType == "item"'>
+        <b:include name='singlePost' />
+      </b:if>
+    </b:includable>
+
+    <b:includable id='allposts'>
+      <div id="blog" class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-4 d-flex flex-column justify-content-center px-4">
+              <h2 class="section-title">My <em>Blog</em></h2>
+              <p class="fs-3">Stay tuned and updated by the latest updates from my blog.</p>
+            </div>
+            <div class="col-12 col-lg-8 blog-items">
+              <div class="row gx-5">
+                <b:loop values='data:posts' var='post'>
+                  <a expr:href='data:post.url' class="col-6 blog-item">
+                    <figure class="figure rounded">
+                      <b:if cond='data:post.featuredImage'>
+                        <img expr:src='data:post.featuredImage' class="figure-img img-fluid rounded"
+                          alt="blog post image" />
+                        <b:else />
+                        <b:if cond="data:post.thumbnailUrl">
+                          <img expr:src='resizeImage(data:post.thumbnailUrl, 400, "4:3")' />
+                          <b:else />
+                          <img
+                            src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkVfbA9kkHjEh-UfT2Aim-3vQfRgkg2WMikmHi-XCKXY2Gg2Aq6rNnJutIyi9c3CrXoGAV8sRRPOELoVRK8Xk-pWxNqIPD711SINxo1PoeEL6SbjBT92AQjPibt4Aoi2qJ30x88RDbjOQZEjLwanxTYEbSMh_qBlsSbAUv4EMhXiOZ3_peaSd0wVYI0lA/s400/no-img.jpeg' />
+                        </b:if>
+                      </b:if>
+                    </figure>
+                    <div class="blog-tags mb-3">
+                      <b:loop values='data:post.labels' var='label'>
+                        <span class="badge bg-info text-dark">
+                          <data:label.name />
+                        </span>
+                      </b:loop>
+                    </div>
+                    <h3 class="blog-title mb-3">
+                      <data:post.title />
+                    </h3>
+                    <div class="d-flex">
+                      <div class="posted-date-wrap me-3">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="posted-date">
+                          <data:post.timestamp />
+                        </span>
+                      </div>
+                      <div class="comments-count-wrap">
+                        <i class="fa-regular fa-comments"></i>
+                        <span class="comments-count">
+                          <data:post.numComments />
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </b:loop>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </b:includable>
+
+    <b:includable id='singlePost'>
+      <b:loop values='data:posts' var='post'>
+        <section id="single-post" class="py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 blog-item">
+                <h2 class="section-title post-title fs-2 m-0 p-0">
+                  <data:post.title />
+                </h2>
+                <p class="fs-5 m-0 p-0">Published on
+                  <data:post.timestamp /> by
+                  <data:post.author />
+                </p>
+                <div class="post-content">
+                  <data:post.body />
+                </div>
+                <div class="labels">
+                  <b:loop values='data:post.labels' var='label'>
+                    <span class="badge bg-info text-dark">
+                      <data:label.name />
+                    </span>
+                  </b:loop>
+                </div>
+
+                <p class="mt-5 p-0">Share the post on social network:</p>
+                <div class="share btn-group pb-5" role="group" aria-label="Share on Social network">
+                  <a class="btn btn-secondary" href="https://www.facebook.com/sharer/sharer.php?u=&lt;data:post.url&gt;"
+                    target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                  <a class="btn btn-secondary"
+                    href="https://twitter.com/intent/tweet?url=&lt;data:post.url&gt;&amp;text=&lt;data:post.title&gt;"
+                    target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                  <a class="btn btn-secondary"
+                    href="https://api.whatsapp.com/send?text=Check%20out%20this%20post:%20&lt;data:post.url&gt;"
+                    target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i> </a>
+                  <a class="btn btn-secondary"
+                    href="https://t.me/share/url?url=&lt;data:post.url&gt;&amp;text=Check%20out%20this%20post"
+                    target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                  <a class="btn btn-secondary"
+                    href="https://www.linkedin.com/shareArticle?url=&lt;data:post.url&gt;&amp;title=&lt;data:post.title&gt;&amp;summary=Check%20out%20this%20post&amp;source=&lt;data:blog.title&gt;"
+                    target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="comments">
+                  <b:include data='post' name='comments' />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </b:loop>
+    </b:includable>
+
+  </b:widget>
+</b:section>

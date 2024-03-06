@@ -1,0 +1,65 @@
+
+<b:section class='mb-4' id='contact' showaddelement='yes'>
+    <b:widget id='ContactForm1' locked='false' title='' type='ContactForm' version='1'>
+        <b:includable id='main'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="col-md-12">
+                            <h2 class="section-title">Got a project in mind? <br />
+                                <em>Drop me a line!</em><br />
+                                Let's make something awesome together.
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <form name='contact-form' class="row g-3 needs-validation p-3">
+                            <div class="col-md-12">
+                                <label for="name" class="form-label">
+                                    <data:contactFormNameMsg />
+                                </label>
+                                <input class='form-control'
+                                    expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name'
+                                    type='text' value='' />
+                            </div>
+                            <div class="col-md-12">
+                                <label for="email" class="form-label">
+                                    <data:contactFormEmailMsg />
+                                </label>
+                                <input class='form-control'
+                                    expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email'
+                                    type='text' value='' />
+                            </div>
+                            <div class="col-md-12">
+                                <label for="message" class="form-label">
+                                    <data:contactFormMessageMsg />
+                                </label>
+                                <textarea class='form-control'
+                                    expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;'
+                                    name='email-message' rows='5'></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <input class='btn btn-primary'
+                                    expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;'
+                                    expr:value='data:contactFormSendMsg' type='button' />
+                            </div>
+
+                            <div class='py-2'>
+                                <!-- Error Message -->
+                                <p class='contact-form-error-message'
+                                    expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'>
+                                </p>
+                                <!-- Success Message -->
+                                <p class='contact-form-success-message'
+                                    expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'>
+                                </p>
+                            </div>
+
+                        </form>
+                    </div>
+                    <b:include name='quickedit' />
+                </div>
+            </div>
+        </b:includable>
+    </b:widget>
+</b:section>
