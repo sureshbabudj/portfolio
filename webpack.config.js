@@ -7,8 +7,8 @@ module.exports = {
     styles: ['./src/scss/styles.scss']
   },
   output: {
-    // filename: "[name].[ext]",
-    path: path.resolve(__dirname, "dist"),
+   // filename: "[name].[ext]",
+    path: path.resolve(__dirname, "dist/assets"),
   },
   devServer: {
     static: path.resolve(__dirname, "dist"),
