@@ -1,4 +1,3 @@
-// import "../scss/styles.scss";
 import * as jQuery from "jquery";
 import * as bootstrap from "bootstrap";
 import "@popperjs/core";
@@ -78,7 +77,6 @@ function getPhotos() {
 }
 
 function isElementInViewport(el) {
-  // Special bonus for those using jQuery
   if (typeof jQuery === "function" && el instanceof jQuery) {
     el = el[0];
   }
@@ -102,8 +100,31 @@ function isElementInViewport(el) {
   );
 }
 
+function getPages() {
+  const blogId = '3061034665133655825';
+  const url = `https://www.googleapis.com/blogger/v3/blogs/${blogId}/pages?maxResults=50&key=AIzaSyBdEOnlEcoMygyrx_2Vgrv6T9-REbbfTNo`;
+  const fallbackImg = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5gGFaqSx8vo7HiZRtCfU90Kb9kDrn3a5i_0AcPZZsTd2AD2BEprzGRwHHTYG5jk7xGe3akqB6HKLhBAYVpgeZSbHOM74Lz10w87vJ9zCj80H341bj-FJdQiunFi6d17E7oJrS_jx2JAsIuckCZiNDJja6Yuf7GL9CyfhxH6ksaAx9JKF2NbQCZwXk_9Y/w640-h426/jo-szczepanska-9OKGEVJiTKk-unsplash.jpg";
+  $.ajax({
+    url,
+    context: $('#load-pages')
+  }).done(function(data) {
+    for (let i = 0; i < data.items.length; i++) {
+      const item = data.items[i];
+      const pic = $('<div />').append(item.content).find('img').first().attr('src');
+      const itemTemplate =
+      `<a href="${item.url}" class="col-12 col-md-6 col-lg-4 page-item link-primary text-decoration-none">
+          <figure class="figure rounded w-100">
+              <img src="${pic ?? fallbackImg}" class="figure-img img-fluid rounded w-100" alt="blog post image">
+          </figure>
+          <h3 class="blog-title mb-3 fs-4">${item.title}</h3>
+      </a>`;
+      this.append(itemTemplate)
+    }
+  });
+}
+
 $(function () {
-  const anchorRef = [ "about", "contact", "photoroll", "blog", "home"];
+  const anchorRef = [ "about", "contact", "photoroll", "works", "blog", "home"];
   const anchors = $(".sd-navbar-nav a.nav-link");
 
   function scrollHandler() {
@@ -124,7 +145,12 @@ $(function () {
   }
 
   getPhotos();
+  getPages();
+
+  // Replace copyright year
+  const copyrightYear = document.getElementById("copyright-year");
+  if (copyrightYear) copyrightYear.textContent = new Date(Date.now()).getFullYear();
 });
-// Replace copyright year
-const copyrightYear = document.getElementById("copyright-year");
-if (copyrightYear) copyrightYear.textContent = new Date(Date.now()).getFullYear();
+
+
+

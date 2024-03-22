@@ -11,7 +11,10 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Leckerli+One&family=Rubik+Mono+One&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+        window.isHomePage = true;
+    </script>
 </head>
 
 <body>
@@ -24,10 +27,12 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas offcanvas-end collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-                    <button class="d-block d-lg-none btn offcanvas-menu-close" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation" alt="close">
+                <div class="offcanvas offcanvas-end collapse navbar-collapse flex-grow-0 w-50"
+                    id="navbarSupportedContent">
+                    <button class="d-block d-lg-none btn offcanvas-menu-close fs-2 text-white m-1" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        alt="close">
                         <i class="fa-regular fa-circle-xmark"></i>
                     </button>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 sd-navbar-nav">
@@ -36,6 +41,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#works">My Works</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#photoroll">Photoroll</a>
@@ -408,6 +416,91 @@
         </div>
     </div>
 
+    <!-- Works -->
+    <section id="works" class='works sd-works-section mb-5'>
+        <div class="container">
+            <h3 class="section-title text-center mb-5">A Labor of Love: Delve into My Recent Ventures and Explore <em>My
+                    Works</em>!</h3>
+            <div class="row g-5" id="load-pages">
+
+            </div>
+        </div>
+    </section>
+
+    <div class="services parallax p-5 my-5 text-white"
+        style=" background-image: url(https://images.unsplash.com/photo-1483401757487-2ced3fa77952?q=80&w=2073);">
+        <div class="container">
+            <h3 class="section-title text-center text-white">Empowering Excellence through Tailored Development
+                Services: Crafting Digital Future</h3>
+            <div class='row text-center g-5'>
+                <!-- Frontend Development Excellence -->
+                <div class='col-12 col-md-6 col-lg-4'>
+                    <span class='rounded-circle service-item p-5 fs-1 my-3 bg-secondary d-inline-block'><i
+                            class='fa-solid fa-code'></i></span>
+                    <h3>Frontend Development</h3>
+                    <p>Elevate your web presence with meticulously crafted frontend solutions. My expertise in HTML5,
+                        CSS3, and JavaScript ensures intuitive user interfaces and seamless user experiences across all
+                        devices.</p>
+                </div>
+
+                <!-- Full Stack Development Mastery -->
+                <div class='col-12 col-md-6 col-lg-4'>
+
+                    <span class='rounded-circle service-item p-5 fs-1 my-3 bg-secondary d-inline-block'>
+                        <i class='fa-solid fa-cubes-stacked'></i></span>
+                    <h3>Full Stack Development</h3>
+                    <p>From frontend to backend, my full stack development prowess brings your ideas to life. I
+                        specialize in leveraging cutting-edge technologies to deliver robust, scalable, and feature-rich
+                        applications tailored to your needs.</p>
+                </div>
+
+                <!-- Software Architecture Expertise -->
+                <div class='col-12 col-md-6 col-lg-4'>
+                    <span class='rounded-circle service-item p-5 fs-1 my-3 bg-secondary d-inline-block'>
+                        <i class='fa-regular fa-object-group'></i>
+                    </span>
+                    <h3>Software Architecture</h3>
+                    <p>Build a solid foundation for your applications with my software architecture consulting services.
+                        I design scalable, maintainable, and future-proof solutions that align with your business goals.
+                    </p>
+                </div>
+
+                <!-- Database Design Brilliance -->
+                <div class='col-12 col-md-6 col-lg-4'>
+                    <span class='rounded-circle service-item p-5 fs-1 my-3 bg-secondary d-inline-block'>
+                        <i class='fa-solid fa-database'></i>
+                    </span>
+                    <h3>Database Design</h3>
+                    <p>Ensure efficient data management with my database design solutions. Whether you require
+                        relational or NoSQL databases, I design optimized database schemas that support your
+                        application&#39;s performance and scalability needs.</p>
+                </div>
+
+                <!-- Cloud Solutions Innovation -->
+                <div class='col-12 col-md-6 col-lg-4'>
+                    <span class='rounded-circle service-item p-5 fs-1 my-3 bg-secondary d-inline-block'>
+                        <i class='fa-solid fa-cloud'></i>
+                    </span>
+                    <h3>Cloud Solutions</h3>
+                    <p>Leverage the power of the cloud to drive innovation and scalability. My cloud solutions encompass
+                        architecture design, migration strategies, and implementation, enabling you to harness the full
+                        potential of cloud technologies.</p>
+                </div>
+
+                <!-- Quality-Driven Development Practices -->
+                <div class='col-12 col-md-6 col-lg-4'>
+                    <span class='rounded-circle service-item p-5 fs-1 my-3 bg-secondary d-inline-block'>
+                        <i class='fa-solid fa-medal'></i>
+                    </span>
+                    <h3>Quality-Driven Development</h3>
+                    <p>Prioritize quality in every phase of development with my quality-driven development approach.
+                        From automated testing to code reviews, I ensure that your applications meet the highest
+                        standards of reliability, security, and performance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- photos -->
     <section class='photoroll sd-photoroll-section' id='photoroll'>
         <div class='container'>
@@ -624,7 +717,6 @@
             </div>
         </div>
     </section>
-
     <footer class="mt-3 py-5">
         <div class="container">
             <div class="divider p-3"></div>

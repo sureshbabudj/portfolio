@@ -57,6 +57,9 @@ html {
     }
   }
 }
+html::before {
+  display: none;
+}
 
 body {
   font-size: 100%;
@@ -518,4 +521,25 @@ footer {
       }
     }
   }
+}
+div.offcanvas ul.sd-navbar-nav {
+  font-size: 1.2rem;
+}
+@include media-breakpoint-down(lg) {
+  div.offcanvas ul.sd-navbar-nav {
+    font-size: 1.7rem;
+    margin: 0 !important;
+    width: 100%;
+    padding: 4rem;
+  }
+}
+@include media-breakpoint-down(sm) {
+  div.offcanvas ul.sd-navbar-nav {
+    font-size: 1.5rem;
+    padding: 2.5rem;
+  }
+}
+.services .service-item {
+  min-height: 10rem;
+  min-width: 10rem;
 }

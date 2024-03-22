@@ -1,9 +1,13 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/js/main.js",
+  entry: {
+    main: ["./src/js/main.js"], 
+    styles: ['./src/scss/styles.scss']
+  },
   output: {
-    filename: "main.js",
+    // filename: "[name].[ext]",
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
@@ -15,24 +19,10 @@ module.exports = {
     rules: [
       {
         test: /\.(scss)$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: () => [require("autoprefixer")],
-              },
-            },
-          },
-          {
-            loader: "sass-loader",
-          },
+      use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
         ],
       },
       {
@@ -49,4 +39,7 @@ module.exports = {
       },
     ],
   },
+  plugins: [new MiniCssExtractPlugin({
+    filename: '[name].css',
+  })]
 };
